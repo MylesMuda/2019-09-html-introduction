@@ -6,17 +6,22 @@
 			/* CSS Styles the page */
 			body{
 				background-color: #DAC2FF;
+				font-family: courier new;
 			}
 			nav#mainNav{
 				background-color: #A491BF;
+
 			}
 			nav#mainNav>ul{
 				/* list-style: none;*/
-
+				font-size: 1.5em; /*Proportional font-resizing*/
+				margin-left: 10%;
 			}
 			nav#mainNav li{
 				list-style: none;
-				display: inline-block;
+				display: inline-block; /*Full line*/
+				margin-left: 5%;
+				padding: 2vh 0;
 			}
 
 		</style>
@@ -38,9 +43,9 @@
 		<header> Sections are : header</header>
 		<nav id="mainNav">
 			<ul>
-				<li>HOME</li>
-				<li>ABOUT</li>
-				<li>CONTACT</li>
+				<li><a href="">HOME</a></li>
+				<li><a href="">ABOUT</a></li>
+				<li><a href="http://www.intel.com">CONTACT</a></li>
 			</ul>	
 		</nav >
 		<nav>
@@ -53,5 +58,30 @@
 		<aside>Aside</aside>
 		<article>Article</article>
 		<footer>Footer</footer>
+
+		<style>
+			div.box{
+				background-color: #766580;
+				padding: 7%;
+				width: 15vh;
+				height: 15vh;
+				display: inline-block;
+				margin: 2vh;
+			}
+			div.boxContainer{
+				margin: 10vh;
+				border: 3px solid #3C3740;
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: center;
+			}			
+		</style>
+		<div class="boxContainer">
+			<div class="box">BOX</div>
+			<div class="box">BOX</div>
+			<div class="box">BOX</div>
+			<div class="box">BOX</div>
+		</div>
+		
 	</body>
 </html>
