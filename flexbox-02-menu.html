@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Flexbox 2</title>
+    <style>
+        body{
+            font-family: 'Courier New', Courier, monospace;
+            background-color: white;
+        }
+        nav{
+            display: flex;
+            width: 80vw;
+            margin: auto;
+            background-color: magenta;
+            justify-content: center;
+        }
+        div.navitem{
+            height: 10vh;
+            min-width: 10vw;
+            margin: 2vw;
+            background-color: darkmagenta;
+            text-align: center;
+        }
+        div.navitem a{
+            text-decoration: none;
+            color: white;
+        }
+        div.navitem a:hover{
+            font-size: 1.1em;
+            font-weight: bold;
+        }
+        div.navitem a:active{
+            background-color: lightcoral;
+            margin-top: 2vmin;
+        }
+        .bikeimages{
+            display: flex;
+            width: 80%;
+            margin: auto;
+            color: black;
+            flex-wrap: wrap;
+        }
+
+        .bikeimages2{
+            display: flex;
+            width: 80%;
+            margin: auto;
+            color: black;
+            flex-wrap: wrap;
+        }
+
+        .bikeimage{
+            min-width: 15vmin;
+            height: 15vmin;
+            background-color: violet;
+            margin: 1vmin;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body onload="getImages()">
+    <nav> 
+        <div class="navitem"><a href="#">Home</a></div>
+        <div class="navitem"><a href="#">About</a></div>
+        <div class="navitem"><a href="#">Blog</a></div>
+        <div class="navitem"><a href="#">Contact</a></div>
+    </nav>
+
+    <h1 style="text-align:center">Cool pictures</h1>
+
+    <selection class="bikeimages">
+               
+        <div class="bikeimage"><img src="https://picsum.photos/200"></div>        
+        <div class="bikeimage"><img src="https://picsum.photos/200"></div>        
+        <div class="bikeimage"><img src="https://picsum.photos/200"></div>        
+        <div class="bikeimage"><img src="https://picsum.photos/200"></div>        
+        <div class="bikeimage"><img src="https://picsum.photos/200"></div>        
+        <div class="bikeimage"><img src="https://picsum.photos/200"></div>        
+        <div class="bikeimage"><img src="https://picsum.photos/200"></div>        
+        <div class="bikeimage"><img src="https://picsum.photos/200"></div>        
+    </selection>
+
+    <selection class="bikeimages2" id="bikeimages2">
+            <div class="bikeimage"><img src="https://picsum.photos/200"></div>        
+            <div class="bikeimage"><img src="https://picsum.photos/200"></div>        
+            <div class="bikeimage"><img src="https://picsum.photos/200"></div>        
+            <div class="bikeimage"><img src="https://picsum.photos/200"></div> 
+    </selection>
+
+    <script>
+
+        function getImages(){
+            for(var i=0;i<10; i++){
+                for(var counter = 120;counter<160;counter++){
+                    var image = document.createElement("img");
+                    image.width="120";
+                    image.src = "https://picsum.photos/" + counter;
+                    image.id = "img" + counter;
+                    document.getElementById('bikeimages2').appendChild(image);
+                }
+            }
+        }
+
+    </script>
+
+</body>
+</html>

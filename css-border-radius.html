@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Border Radius</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        div.button{
+            background-color: rgb(124, 76, 168);
+            /* allocate a width */
+            display: inline-block;
+            padding: 2vmin;
+            border: 2px solid rgb(80, 162, 255);
+            /*box-shadow: 1vmin 1vmin 1vmin 2vmin */
+            border-radius: 5vmin;
+            margin-right: 30vmax;
+        }
+        div.button:hover{
+            background-color: rgb(128, 235, 224);
+            color: salmon;
+            cursor: pointer;
+        }
+        div.button:active{
+            font-size: 1.1em;
+            border: 2px solid salmon;
+        }
+        div.circle{
+            background-color: lawngreen;
+            margin: 7vmin 0 0 10vmin;
+            margin-left: 10vmin;
+            display: inline-block;
+            width: 20vmin;
+            height: 20vmin;
+            border-radius: 100%;
+            padding: 5vmin;
+            text-align: center;
+            line-height: 20vmin;
+        }
+    </style>
+</head>
+<body>
+    <h1>Border Radius</h1>
+    <div class="button">This is a Div</div>
+    
+    <div class="circle">This is a Circle</div>
+</body>
+</html>
